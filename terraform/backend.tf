@@ -6,8 +6,8 @@ terraform {
     }
   }
   backend "s3" {
-    bucket = "terraform-remote-state-555"
-    key    = "terraform_state/terraform.tfstate"
+    bucket = "terraform-remote-state"
+    key    = "terraform.tfstate"
     region = "us-east-1"
   }
 }
