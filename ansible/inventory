@@ -1,0 +1,8 @@
+[jenkins]
+10.10.3.150 ansible_ssh_user=ubuntu ansible_ssh_private_key_file="../id_rsa"
+[app]
+10.10.4.240 ansible_ssh_user=ubuntu ansible_ssh_private_key_file="../id_rsa"
+[jenkins:vars]
+ansible_ssh_common_args='-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o ProxyCommand="ssh -W %h:%p -q ubuntu@35.171.133.184"'
+[app:vars]
+ansible_ssh_common_args='-o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o ProxyCommand="ssh -W %h:%p -q ubuntu@35.171.133.184"'
